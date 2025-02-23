@@ -72,7 +72,7 @@ The colour scheme is designed to be calming and easy on the eyes. The following 
 - Use dark coloured text on a light (not white) background.
 - Avoid green and red/pink, as these colours are difficult for those who have colour vision deficiencies (colour blindness).
 
-![img_1.png](img_1.png)![img.png](img.png)
+!['Colour Contrast Grid'](docs/images/screenshots/colour-contrast-grid.png 'Colour Contrast Grid')
 
 #### Typography
 #### ***Font***
