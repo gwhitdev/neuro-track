@@ -65,7 +65,14 @@ The overall feel of the application is one that is attractive and interesting bu
 - The site is designed to be accessible to all users.
 - The site is designed to be secure.
 #### Colour Scheme
-The colour scheme is designed to be calming and easy on the eyes.
+The colour scheme is designed to be calming and easy on the eyes. The following is taken from the Dyslexia Friendly Design Style guide (see credits).
+- Use single colour backgrounds.
+- Avoid background patterns or pictures and distracting surrounds.
+- Use sufficient contrast levels between background and text.
+- Use dark coloured text on a light (not white) background.
+- Avoid green and red/pink, as these colours are difficult for those who have colour vision deficiencies (colour blindness).
+
+![img_1.png](img_1.png)![img.png](img.png)
 
 #### Typography
 #### ***Font***
@@ -111,6 +118,10 @@ These fonts are in the Woff2 format and are held locally on the app's server.
 The design of the site is based on the needs of neurodivergent users. <br>
 I have used the following resources to inform the design:
 - [https://neurodiversity.design/](https://neurodiversity.design/)
+
+### Dyslexia friendly design
+The design of the site is inspired by the needs of dyslexic users:
+- [https://www.dyslexic.com/blog/dyslexia-friendly-design/](https://www.dyslexic.com/blog/dyslexia-friendly-design/)
 
 
 ### Content
