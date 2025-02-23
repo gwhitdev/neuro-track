@@ -37,6 +37,7 @@ indicators to help understand and manage behaviours and emotions
 ultimately developing insight.
 
 ### Developer Goals
+- A project that puts neurodivergence first.
 - A professional presentation of the use of web technologies including: HTML, CSS< JavaScript and APIs.
 - A project that has the potential for further development and expansion.
 - A useful project for other people.
@@ -54,6 +55,7 @@ ultimately developing insight.
 1. To be able to easily view my recorded symptoms in a graph, so that I can see my records and try and identify any patterns in a more visual way.
 2. To be able to easily view my recorded symptoms in a calendar, so that I can see my records and try and identify any patterns in a more visual date-based way.
 3. To be able to share my records, so that I can show them to a professional or a friend.
+4. TO be able to change the colour scheme, so that my preferences are catered for.
 
 ### Design choices
 The overall feel of the application is one that is attractive and interesting but not overwhelming.
@@ -63,29 +65,55 @@ The overall feel of the application is one that is attractive and interesting bu
 - The site is designed to be accessible to all users.
 - The site is designed to be secure.
 #### Colour Scheme
+The colour scheme is designed to be calming and easy on the eyes.
+
 #### Typography
+#### ***Font***
+The chosen font is [Atkinson Hyperlegible Next](https://www.brailleinstitute.org/freefont/).
+This font was chosen because it is designed to be easy to read for people in general, but also specifically for those 
+with a neurodiversity.
+
+The selected styles and weights are:
+- Regular
+- Bold
+- Extra Bold
+- Regular Italic
+- Semi Bold Italic
+- Regular Italic 
+
+These fonts are in the Woff2 format and are held locally on the app's server.
 #### Imagery
 
 ### Wireframes
 #### Mobile
 #### Desktop
 
+---
 ## Features
 ### Existing Features
 ### Features Left to Implement
 
+---
 ## Technologies used
 
 
+---
 ## Testing
 
 
+---
 ## Deployment
 ### How to run this project locally
 
+---
 ## Credits
+### Neurodivergence Design
+The design of the site is based on the needs of neurodivergent users. <br>
+I have used the following resources to inform the design:
+- [https://neurodiversity.design/](https://neurodiversity.design/)
+
+
 ### Content
 ### Media
 ### Code
 ### Acknowledgements
-```
