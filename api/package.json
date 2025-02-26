@@ -1,9 +1,11 @@
 {
-  "name": "NeuroTrack API",
+  "name": "NeuroTrack-API",
   "version": "1.0.0",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node api.js",
+    "watch": "node --watch --env-file=.env api.js"
   },
   "keywords": [],
   "author": "",

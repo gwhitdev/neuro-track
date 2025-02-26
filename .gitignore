@@ -4,9 +4,3 @@
 app/.env
 api/.env
 node_modules
-app/package.json
-app/package-lock.json
-api/package.json
-api/package-lock.json
-package.json
-package-lock.json
