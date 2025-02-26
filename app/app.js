@@ -3,9 +3,11 @@ const app = express();
 const PORT = process.env.PORT;
 const ENVIRONMENT = process.env.ENVIRONMENT;
 
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-  console.log('APP GET request received');
-  res.send('hi APP');
+  res.render('index');
 });
 
 if (ENVIRONMENT === "dev") {

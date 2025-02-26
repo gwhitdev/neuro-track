@@ -1,0 +1,25 @@
+#header {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5rem;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+#nav-button{
+    background-color: green;
+
+}
+.nav-menu-hide {
+    display: none;
+    height: 0;
+    width: 0;
+}
+.nav-menu-show {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
