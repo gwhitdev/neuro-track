@@ -11,7 +11,7 @@
     "start": "node server.js",
     "watch-api": "cd api && npm run watch",
     "watch-app": "cd app && npm run watch",
-    "dev": "npm-run-all --parallel watch-api watch-app"
+    "dev": "npm i && node --watch --env-file=.env server.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/gwhitdev/neuro-track#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-openid-connect": "^2.17.1"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

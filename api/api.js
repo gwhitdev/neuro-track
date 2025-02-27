@@ -8,10 +8,4 @@ api.get('/', (req, res) => {
   res.send('hi API');
 });
 
-if (ENVIRONMENT === "dev") {
-  api.listen(PORT, () => {
-    console.log('API is running on port ' + PORT);
-  });
-}
-
 module.exports = api;

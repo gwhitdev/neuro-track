@@ -35,10 +35,4 @@ app.get('/dashboard', requiresAuth(), (req, res) => {
   res.render('dashboard', data);
 })
 
-if (ENVIRONMENT === "dev") {
-  app.listen(PORT, () => {
-    console.log('APP is running on port ' + PORT);
-  });
-}
-
 module.exports = app;

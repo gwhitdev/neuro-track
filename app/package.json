@@ -22,8 +22,5 @@
   },
   "homepage": "https://github.com/gwhitdev/neuro-track#readme",
   "dependencies": {
-    "ejs": "^3.1.10",
-    "express": "^4.21.2",
-    "express-openid-connect": "^2.17.1"
   }
 }
