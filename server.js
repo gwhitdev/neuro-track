@@ -2,10 +2,10 @@
 * This file should run in Production only
 **/
 
-const express = require('express');
+import express from 'express';
 const server = express();
-const app = require('./app');
-const api = require('./api');
+import app from './app/app.js';
+import api from './api/api.js';
 const PORT = process.env.PORT;
 
 // Runs the API and APP apps on the same server

@@ -1,10 +1,16 @@
-const express = require('express')
+import express from 'express';
 const app = express();
 const PORT = process.env.PORT;
 const ENVIRONMENT = process.env.ENVIRONMENT;
-const path = require('path');
-const { auth } = require('express-openid-connect');
-const { requiresAuth } = require('express-openid-connect');
+import { dirname } from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import {auth} from 'express-openid-connect';
+import pkg from 'express-openid-connect';
+const {requiresAuth} = pkg;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const config = {
   authRequired: false,
@@ -16,6 +22,7 @@ const config = {
 };
 
 app.use(auth(config));
+
 app.use(express.static(path.join(__dirname,'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -35,4 +42,4 @@ app.get('/dashboard', requiresAuth(), (req, res) => {
   res.render('dashboard', data);
 })
 
-module.exports = app;
+export default app;

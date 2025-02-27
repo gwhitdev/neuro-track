@@ -22,5 +22,6 @@
   },
   "homepage": "https://github.com/gwhitdev/neuro-track#readme",
   "dependencies": {
-  }
+  },
+  "type": "module"
 }
