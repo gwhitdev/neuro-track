@@ -1,1 +1,10 @@
-<%= user %>
+<%- include('partials/header')%>
+<%- include('partials/nav') %>
+
+<main class="container">
+    <div id="user-welcome">
+       Welcome <%= user.name %>!
+    </div>
+</main>
+
+<%- include('partials/footer') %>

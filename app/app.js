@@ -12,7 +12,7 @@ const config = {
   secret: process.env.AUTH0SECRET,
   baseURL: process.env.ENVIRONMENT === "dev" ? `http://localhost:${PORT}` : `https://neurotrack-63884f254468.herokuapp.com`,
   clientID: '5cO4WcJMs86IVjRYKhOfm35KlW0yJBdy',
-  issuerBaseURL: 'https://dev-3-d1xtuk.eu.auth0.com'
+  issuerBaseURL: 'https://dev-3-d1xtuk.eu.auth0.com',
 };
 
 app.use(auth(config));
@@ -21,16 +21,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  const data = {
+    isAuthenticated: req.oidc.isAuthenticated()
+  }
+  res.render('index',data);
 });
-
-app.get('/callback', (req, res) => {
-  res.redirect('/dashboard');
-})
 
 app.get('/dashboard', requiresAuth(), (req, res) => {
   const data = {
-    user: JSON.stringify(req.oidc.user)
+    user: req.oidc.user,
+    isAuthenticated: req.oidc.isAuthenticated()
   }
   res.render('dashboard', data);
 })
