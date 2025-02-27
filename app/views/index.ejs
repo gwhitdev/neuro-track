@@ -1,60 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/fonts.css">
-    <link rel="stylesheet" href="assets/css/colours.css">
-    <link rel="stylesheet" href="assets/css/main-style.css">
-    <title>NeuroTrack</title>
-</head>
-<body>
-    <div id="header">
-        <div id="branding">
-            NEUROTRACK
-        </div>
-        <div id="nav">
-            <div id="nav-button">
-                BUTTON
-            </div>
-        </div>
-    </div>
-    <div id="nav-menu" class="nav-menu-hide">
-        <ul>
-            <li>
-                Home
-                <div class="separator"></div>
-            </li>
-
-            <li>
-                New Record
-                <div class="separator"></div>
-            </li>
-
-            <li>
-                View My Records
-                <div class="separator"></div>
-            </li>
-
-            <li>
-                Share My Records
-                <div class="separator"></div>
-            </li>
-
-            <li>
-                Help
-                <div class="separator"></div>
-            </li>
-
-            <li>
-                Contact NeuroTrack
-            </li>
-        </ul>
-    </div>
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
     <main class="container">
         <div>
             CONTENT
         </div>
     </main>
-<script type="module" src="assets/js/nav-menu.mjs"></script>
-</body>
-</html>
+<%- include('partials/footer') %>

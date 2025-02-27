@@ -1,1 +1,17 @@
-<%= user %>
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+<link rel="stylesheet" href="assets/css/dashboard.css">
+
+<%- include('partials/main') %>
+
+Name: <%= user.name %>
+Sub: <%= user["sub"] %>
+<button id="create" data-sub=<%= user.sub %>>Create record</button>
+<button id="getData" data-sub=<%= user.sub %>>Get records</button>
+
+<div id="data">
+
+</div>
+<script src="assets/js/dashboard.js"></script>
+
+<%- include('partials/footer') %>

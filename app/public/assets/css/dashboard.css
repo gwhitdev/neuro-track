@@ -1,0 +1,11 @@
+ol {
+    padding: 3rem 0;
+    margin-left: 3rem;
+}
+ol > li {
+    padding-top: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}

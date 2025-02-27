@@ -28,7 +28,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    isAuthenticated: req.oidc.isAuthenticated()
+  });
 });
 
 app.get('/callback', (req, res) => {
@@ -37,7 +39,8 @@ app.get('/callback', (req, res) => {
 
 app.get('/dashboard', requiresAuth(), (req, res) => {
   const data = {
-    user: JSON.stringify(req.oidc.user)
+    user: req.oidc.user,
+    isAuthenticated: req.oidc.isAuthenticated()
   }
   res.render('dashboard', data);
 })
