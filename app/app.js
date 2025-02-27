@@ -10,7 +10,7 @@ const config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.AUTH0SECRET,
-  baseURL: 'http://localhost:4002',
+  baseURL: process.env.ENVIRONMENT === "dev" ? `http://localhost:${PORT}` : `https://localhost:${PORT}`,
   clientID: '5cO4WcJMs86IVjRYKhOfm35KlW0yJBdy',
   issuerBaseURL: 'https://dev-3-d1xtuk.eu.auth0.com'
 };
