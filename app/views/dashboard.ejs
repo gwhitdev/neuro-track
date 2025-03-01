@@ -3,15 +3,14 @@
 <link rel="stylesheet" href="assets/css/dashboard.css">
 
 <%- include('partials/main') %>
+<main id="container" data-sub=<%= user.sub %>>
+    Name: <%= user.name %>
+    Sub: <%= user["sub"] %>
+    <div id="data">
 
-Name: <%= user.name %>
-Sub: <%= user["sub"] %>
-<button id="create" data-sub=<%= user.sub %>>Create record</button>
-<button id="getData" data-sub=<%= user.sub %>>Get records</button>
+    </div>
+</main>
 
-<div id="data">
-
-</div>
-<script src="assets/js/dashboard.js"></script>
+<script src="assets/js/dashboard/init.mjs" type="module"></script>
 
 <%- include('partials/footer') %>

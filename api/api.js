@@ -41,7 +41,7 @@ api.get('/records', async (req, res) => {
     const records = await client.ft.search('index_with_timestamp',req.query.usr,{
       SORTBY: {
         BY: 'timestamp',
-        DIRECTION: 'DESC'
+        DIRECTION: 'ASC'
       },
       LIMIT: {
         from:0, size:100
