@@ -1,33 +1,36 @@
 export default class EFactory
 {
-    static elementList = { returnable: null };
+    static allowedTypes = ['li','div','ul','ol','text'];
 
     static create(element) {
         try {
-            this.elementList.returnable = this.#createNewElement(element);
+            return this.#createNewElement(element);
         } catch (err) {
             console.error(err);
+            return null;
         }
-        return this.elementList.returnable;
     }
 
     static #validateElementInput(element)  {
-        if (!element instanceof Object ) throw new Error('Error: DJS44: Element creation attempt not successful. Try again with a valid string');
-        else {
-            const acceptableElements = ['li','div','ul','ol','text'];
-            return acceptableElements.includes(element.type);
+        if (typeof element !== 'object' || element === null ) {
+            throw new Error('EFactory.#validateElementInput: Could not validate required element: creation attempt not successful. Try again with a valid object');
         }
+        return this.allowedTypes.includes(element.type);
     }
     static #createTextNode(msg) {
+        if (typeof msg !== 'string' || msg.trim() === '') {
+            throw new Error('EFactory.#createTextNote: Argument must be a non-empty string.')
+        }
         return document.createTextNode(msg);
     }
 
     static #createNewElement(element) {
         if (! this.#validateElementInput(element)) {
-            console.error('Error DSJ54: Inputted element cannot be created.');
-            return;
+            throw new Error(`EFactory.#createNewElement: Invalid element type "${element.type}". Allowed types: ${this.allowedTypes.join(', ')}.`);
         }
-        if (element.type === 'text') return this.#createTextNode(element.msg);
+        if (element.type === 'text') {
+            return this.#createTextNode(element.msg);
+        }
         return document.createElement(element.type);
     }
 }
