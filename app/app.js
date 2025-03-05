@@ -24,9 +24,10 @@ const config = {
 app.use(auth(config));
 
 app.use('/assets', express.static(path.join(__dirname,'/public/assets')));
-app.use('/assets/js', express.static(path.join(__dirname, '/src')));
+app.use('/components', express.static(path.join(__dirname, '/src/components')));
+app.use('/assets/js', express.static(path.join(__dirname, 'public/assets/js')));
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {

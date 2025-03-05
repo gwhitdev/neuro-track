@@ -1,7 +1,7 @@
 /**
 * This file sets up navigation automation
 **/
-import logger from './logger.mjs';
+import logger from '/assets/js/logger.mjs';
 
 const NAVIGATION = {
     navMenu: document.getElementById("nav-menu"),
