@@ -80,11 +80,12 @@ export default class Dashboard
 
     #loadData() {
             this.#loading(true);
-            fetch(`api/records?usr=${this.sub}`)
+            fetch(`/api/records?usr=${this.sub}`)
                 .then(response => response.json())
                 .then(data => {
                     if (this.fetched.data instanceof Array && this.fetched.data.length === 0) this.#noDataReceived(this.domDataDiv);
-                    else this.fetched.data = data[0].records.documents;
+                    //console.log(data.records.documents[0]);
+                    else this.fetched.data = data.records.documents;
                 })
                 .then(() => this.#pushDataToNodes())
                 .then(() => this.#loading(false))
